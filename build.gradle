@@ -1,0 +1,21 @@
+apply plugin: 'idea'
+apply plugin: 'java'
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.6'
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+dependencies {
+	compile (
+		'com.google.inject:guice:3.0'
+	)
+	testCompile (
+		'junit:junit:4.12',
+		'org.mockito:mockito-core:1.9.5',
+	)
+}
